@@ -1,0 +1,4 @@
+[{ "text":"coca-cola", "description": "coca-cola 2L", "done":true },
+ { "text":"arroz", "description": "5 Kg de arroz", "done":false},
+ { "text":"feijão", "description": "1 Kg de feijão", "done":false },
+ { "text":"cerveja", "description": "1 Caixa de cerveja", "done":true }]

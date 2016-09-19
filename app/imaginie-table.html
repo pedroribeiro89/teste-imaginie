@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+<!--            <h2>{{notDone}} Item faltando</h2>-->
+            <h2>{{notDone}} faltando</h2>
+            <p>{{todos.length}} Total</p>
+        </div>
+        <div class="col-sm-8">
+            <ul class="checklist" ng-repeat="product in todos">
+                <li class="item ng-scope">
+                    <div class="content">
+                        <h3 class="ng-binding">{{product.text}}</h3>
+                        <p class="ng-binding"> {{product.description}}</p>
+                    </div>
+                    <div class="checkbox-holder">
+                        <div class="checkbox">
+                            <input type="checkbox" id="{{product.text}}" ng-model="product.done" ng-click="getNotDone()"/>
+                            <label for="{{product.text}}"></label>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="col-sm-3">
+            <h4>Ordenar</h4>
+            <div class="btn-sort btn-group-vertical" role="group">
+                <button type="button" class="btn btn-default" ng-click="sort('text')">Alfabeticamente</button>
+                <button type="button" class="btn btn-default" ng-click="sort(['done','text'])">Marcados</button>
+            </div>
+        </div>
+    </div>
+</div>
